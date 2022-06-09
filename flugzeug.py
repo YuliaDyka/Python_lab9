@@ -1,20 +1,14 @@
 from vehicles import Vehicles
 
 class Flugzeug (Vehicles):
-    def __init__(self, model, price, manufactureYear, maxSpeed, maxHeigh):
+    def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, max_heigh: int):
         
-        self.maxHeigh = maxHeigh
-        self.maxSpeed = maxSpeed
+        self.max_heigh = max_heigh
+        self.max_speed = max_speed
         self.model = model
-        self.manufactureYear = manufactureYear
+        self.manufacture_year = manufacture_year
         self.price = price
         
-
-    
-    def show(self):
-        print(f"model - {self.model}")
-        print(f"price - {self.price}$")
-        print(f"manufactureYear - {self.manufactureYear}")
-        print(f"maxSpeed - {self.maxSpeed} km/h")
-        print(f"maxHeigh - {self.maxHeigh} m")
+    def __str__(self):
+        return f"model - {self.model}\nprice - {self.price}$\nmanufacture year - {self.manufacture_year}\nmax speed - {self.max_speed} km/h\nmax heigh - {self.max_heigh} m"
     

@@ -2,19 +2,14 @@ from vehicles import Vehicles
 
 class Bus (Vehicles):
     
-    def __init__(self, model, price, manufactureYear, maxSpeed, passengerCount):
+    def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, passenger_count: int):
         
-        self.passengerCount = passengerCount
+        self.passenger_count = passenger_count
         self.model = model
-        self.manufactureYear = manufactureYear
-        self.maxSpeed = maxSpeed
+        self.manufacture_year = manufacture_year
+        self.max_speed = max_speed
         self.price = price
        
-
+    def __str__(self):
+        return f"model - {self.model}\nprice - {self.price}$\nmanufacture year - {self.manufacture_year}\nmax speed - {self.max_speed} km/h\npassenger count - {self.passenger_count}"
     
-    def show(self):
-        print(f"model - {self.model}")
-        print(f"price - {self.price}$")
-        print(f"manufactureYear - {self.manufactureYear}")
-        print(f"maxSpeed - {self.maxSpeed} km/h")
-        print(f"passengerCount - {self.passengerCount}")
