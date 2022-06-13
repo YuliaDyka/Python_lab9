@@ -1,6 +1,6 @@
-from vehicles import Vehicles
+from vehicle import Vehicle
 
-class Tram (Vehicles):
+class Tram (Vehicle):
     def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, passenger_car_count: int):
         
         self.passenger_car_count = passenger_car_count
@@ -10,5 +10,4 @@ class Tram (Vehicles):
         self.price = price
         
     def __str__(self):
-        return f"model - {self.model}\nprice - {self.price}$\nmanufacture year - {self.manufacture_year}\nmax speed - {self.max_speed} km/h\npassenger car count - {self.passenger_car_count}"
-    
+        return super().__str__() + f"passenger car count - {self.passenger_car_count}"

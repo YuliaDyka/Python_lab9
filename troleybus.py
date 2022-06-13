@@ -1,6 +1,6 @@
-from vehicles import Vehicles
+from vehicle import Vehicle
 
-class Troleybus (Vehicles):
+class Troleybus (Vehicle):
     def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, power: int):
         
         self.power = power 
@@ -10,5 +10,5 @@ class Troleybus (Vehicles):
         self.price = price
         
     def __str__(self):
-        return f"model - {self.model}\nprice - {self.price}$\nmanufacture year - {self.manufacture_year}\nmax speed - {self.max_speed} km/h\npower - {self.power} W"
+          return super().__str__() + f"power - {self.power} W"
     

@@ -3,6 +3,7 @@ from bus import Bus
 from flugzeug import Flugzeug
 from troleybus import Troleybus
 from tram import Tram
+from vehicle import Vehicle
 
 print ("\n------- Lab9 --------\n")
 

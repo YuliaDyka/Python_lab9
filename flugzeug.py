@@ -1,6 +1,6 @@
-from vehicles import Vehicles
+from vehicle import Vehicle
 
-class Flugzeug (Vehicles):
+class Flugzeug (Vehicle):
     def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, max_heigh: int):
         
         self.max_heigh = max_heigh
@@ -10,5 +10,4 @@ class Flugzeug (Vehicles):
         self.price = price
         
     def __str__(self):
-        return f"model - {self.model}\nprice - {self.price}$\nmanufacture year - {self.manufacture_year}\nmax speed - {self.max_speed} km/h\nmax heigh - {self.max_heigh} m"
-    
+        return super().__str__() + f"max heigh - {self.max_heigh} m"
