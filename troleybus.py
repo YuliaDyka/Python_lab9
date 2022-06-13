@@ -1,19 +1,14 @@
-from vehicles import Vehicles
+from vehicle import Vehicle
 
-class Troleybus (Vehicles):
-    def __init__(self, model, price, manufactureYear, maxSpeed, power):
+class Troleybus (Vehicle):
+    def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, power: int):
         
         self.power = power 
-        self.maxSpeed = maxSpeed
+        self.max_speed = max_speed
         self.model = model
-        self.manufactureYear = manufactureYear
+        self.manufacture_year = manufacture_year
         self.price = price
         
-
+    def __str__(self):
+          return super().__str__() + f"power - {self.power} W"
     
-    def show(self):
-        print(f"model - {self.model}")
-        print(f"price - {self.price}$")
-        print(f"manufactureYear - {self.manufactureYear}")
-        print(f"maxSpeed - {self.maxSpeed} km/h")
-        print(f"power - {self.power} W")

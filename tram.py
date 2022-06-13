@@ -1,19 +1,13 @@
-from vehicles import Vehicles
+from vehicle import Vehicle
 
-class Tram (Vehicles):
-    def __init__(self, model, price, manufactureYear, maxSpeed, passengerCarCount):
+class Tram (Vehicle):
+    def __init__(self, model: str, price: int, manufacture_year: int, max_speed: int, passenger_car_count: int):
         
-        self.passengerCarCount = passengerCarCount
-        self.maxSpeed = maxSpeed
+        self.passenger_car_count = passenger_car_count
+        self.max_speed = max_speed
         self.model = model
-        self.manufactureYear = manufactureYear
+        self.manufacture_year = manufacture_year
         self.price = price
         
-
-    
-    def show(self):
-        print(f"model - {self.model}")
-        print(f"price - {self.price}$")
-        print(f"manufactureYear - {self.manufactureYear}")
-        print(f"maxSpeed - {self.maxSpeed} km/h")
-        print(f"passengerCarCount - {self.passengerCarCount}")
+    def __str__(self):
+        return super().__str__() + f"passenger car count - {self.passenger_car_count}"
